@@ -65,5 +65,8 @@ app.post("/api/summarize", async (req, res) => {
   }
 });
 
-const PORT =  3000;
-app.listen(PORT, () => console.log("Backend running on " + PORT));
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log("Backend listening on PORT:", PORT);
+});
